@@ -1,0 +1,237 @@
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.end-of-line-comment == append ==
+# <CURSOR>
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.frame ==
+#---------------------------------------------------------------------------
+#  <CURSOR>
+#---------------------------------------------------------------------------
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.function ==
+=item * B<|?FUNCTION_NAME|>(I<|?PARAM|>)
+
+	PARAMETERS:
+            1. |?PARAM|
+	RETURNS:  ????
+	DESCRIPTION:  ????
+
+=cut
+
+sub |?FUNCTION_NAME| {
+    my (|?PARAM|) = @_;
+}
+
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.method ==
+#===  CLASS METHOD  ============================================================
+#        CLASS:  |?CLASSNAME|
+#       METHOD:  |?METHODNAME|
+#   PARAMETERS:  ????
+#      RETURNS:  ????
+#  DESCRIPTION:  <CURSOR>
+#       THROWS:  no exceptions
+#     COMMENTS:  none
+#     SEE ALSO:  n/a
+#===============================================================================
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-pl == start ==
+#!/usr/local/bin/perl -w
+#
+# $Id$
+# $Header$
+#
+# @desc:
+#
+
+=head1 NAME
+
+B<|FILENAME|> - 
+
+=head1 SYNOPSIS
+
+
+|FILENAME|
+
+    [-       <>]
+   
+=head1 DESCRIPTION
+
+=cut
+
+use strict;
+use warnings "all";
+
+# Base packages
+use Deshaw::Base;
+use Deshaw::Getopt::Long;
+use Deshaw::Util::Log;
+
+# Global variables
+my ($my_date);
+
+{
+    # Process user input
+    process_args();
+
+    # Initialize global variables
+    initialize_vars();
+
+    # Main logic
+    main();
+}
+
+#
+# Main logic
+#
+sub main {
+}
+
+#
+# Process arguments
+#
+sub process_args {
+    GetOptions($GETOPT_DATE => \$my_date,
+            );
+
+}
+
+#
+# Initialize variables
+#
+sub initialize_vars {
+}
+
+
+1;
+
+__END__
+
+=head1 AUTHOR
+
+|AUTHOR|, <|EMAIL|>
+
+=head1 VERSION
+
+ $Id: $
+ $Revision:  $
+ $Source:  $
+
+=cut
+
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-pm == start ==
+# $Source $
+# $Id $
+# @desc: |?DESC|
+#
+=head1 NAME
+
+|?PACKAGE|
+
+=head1 DESCRIPTION
+
+|?DESC|
+
+=head1 SYNOPSIS
+
+
+=cut
+
+package |?PACKAGE|;
+
+use strict;
+use warnings 'all';
+
+use Deshaw::Base;
+
+=head1 CONSTRUCTOR
+
+=over 4
+
+=item B<new> ()
+
+Construct a new |?PACKAGE|.
+
+=cut
+
+sub new {
+   my $class = shift;
+   my $self = {};
+   return bless($self, $class);
+}
+
+=back
+
+<CURSOR>
+
+1;
+
+=back
+
+=head1 AUTHOR
+
+|AUTHOR|, <|EMAIL|>
+
+=head1 VERSION
+
+ $Id: $
+ $Revision:  $
+ $Source:  $
+
+=cut
+
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-t == start ==
+#
+#===============================================================================
+#
+#         FILE:  |FILENAME|
+#
+#  DESCRIPTION:  <CURSOR>
+#
+#        FILES:  ---
+#         BUGS:  ---
+#        NOTES:  ---
+#       AUTHOR:  |AUTHOR| (|AUTHORREF|), |EMAIL|
+#      COMPANY:  |COMPANY|
+#      VERSION:  1.0
+#      CREATED:  |DATE| |TIME|
+#     REVISION:  ---
+#===============================================================================
+
+use strict;
+use warnings 'all';
+
+use Test::More tests => 1;                      # last test to print
+
+
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-pod == start ==
+#
+#===============================================================================
+#
+#         FILE:  |FILENAME|
+#
+#  DESCRIPTION:  |CURSOR|
+#
+#       AUTHOR:  |AUTHOR| (|AUTHORREF|), <|EMAIL|>
+#      COMPANY:  |COMPANY|
+#      CREATED:  |DATE|
+#     REVISION:  ---
+#===============================================================================
+
+
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.keyword-bug == append ==
+ # :BUG:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+== comment.keyword-todo == append ==
+ # :TODO:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+== comment.keyword-tricky == append ==
+ # :TRICKY:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+== comment.keyword-warning == append ==
+ # :WARNING:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+== comment.keyword-workaround == append ==
+ # :WORKAROUND:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+== comment.keyword-keyword == append ==
+ # :|?KEYWORD:u|:|DATE| |TIME|:|AUTHORREF|: <CURSOR>
+§%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
